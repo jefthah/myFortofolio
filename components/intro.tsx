@@ -1,21 +1,35 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import useTypingEffect from "./hooks/useTypingEffect"; // Import the custom hook
+import useTypingEffect from "./hooks/useTypingEffect";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const roles = ["Front-end developer", "designer", "video editor"];
 
 export default function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: true, // Ensures the event is triggered only once
+  });
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection]);
+
   const typingText = useTypingEffect(roles);
 
   return (
-    <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28" ref={ref}>
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

@@ -2,9 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import myListAnimeImg from "@/public/mylistanime.png";
+import upnSehatImg from "@/public/UPN SEHAT.png";
+import bookPortfolioImg from "@/public/bookFortfolio.png"
 
 export const links = [
   {
@@ -62,25 +63,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "My List Anime",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A website for tracking watched anime, writing reviews, andrating series. Users can view ratings and reviews asreferences from others.",
+    tags: ["HTML", "Tailwind CSS", "Postgresql ", "Express JS", "Prisma"],
+    imageUrl: myListAnimeImg,
   },
   {
-    title: "rmtDev",
+    title: "UPN Sehat",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "UPN Sehat is a health app designed to simplify access to various healthcare services.",
+    tags: ["Java", "Firebase", "Figma", "Android Studio"],
+    imageUrl: upnSehatImg,
   },
   {
-    title: "Word Analytics",
+    title: "Book Portfolio Design",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A public web book portfolio design",
+    tags: ["HTML", "CSS", "JavaScript"],
+    imageUrl: bookPortfolioImg,
   },
 ] as const;
 
