@@ -1,15 +1,17 @@
 import About from "@/components/about";
-import  Intro from "@/components/intro"
+import Intro from "@/components/intro";
 import Projects from "@/components/projects";
-import SectionDriver from "@/components/section-driver";
+import Skills from "@/components/skills";
+import SectionDriver from "@/components/section-driver"; // Add this import
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
       <Intro />
-      <SectionDriver />
+      <SectionDriver /> {/* Ensure this component is imported and used */}
       <About />
       <Projects />
+      <Skills />
     </main>
   );
 }

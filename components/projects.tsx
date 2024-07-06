@@ -27,7 +27,7 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="scroll-mt-28 min-h-screen" ref={inViewRef}>
+    <section id="projects" className="scroll-mt-28 min-h-screen mb-0 pb-28" ref={inViewRef}>
       <motion.div
         ref={scrollRef}
         style={{
@@ -35,9 +35,9 @@ export default function Projects() {
           opacity: scrollYProgress,
         }}
       >
-        <SectionHeading>My PROJECT</SectionHeading>
+        <SectionHeading>My PROJECTS</SectionHeading>
       </motion.div>
-      <div>
+      <div className="mb-0 pb-0">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
